@@ -15,6 +15,7 @@
 *.out
 *.snm
 *.toc
+*.synctex
 *.synctex.gz
 *.tar.gz
 
