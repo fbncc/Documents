@@ -1,0 +1,120 @@
+\documentclass[leqno,autodetect-engine, dvipdfmx-if-dvi,ja=standard]{bxjsarticle}
+\input{header.tex}
+\title{行列式}
+\begin{document}
+	
+	\section{行列式の定義}
+	
+		\begin{dfn}　行列 $\mA = (\va_1, \dots,\va_n) = (a_{i j})$ とするとき，この行列 $\mA$ の行列式 $\det(\mA)$ を次のように定義する．
+			\begin{equation}
+				\det(\mA) := \sum_{\sigma \in S_n} \sgn(\sigma) \ a_{1 \, \sigma(1)} \dots a_{n \, \sigma(n)}
+			\end{equation}
+		
+			行列式は，次のように表すことがある．
+			\begin{equation}
+				\det(\va_1,\dots,\va_n), \det(a_{i j}), \rvert A \lvert,  \rvert \va_1, \dots, \va_n \lvert, \rvert a_{i j} \lvert,
+				\begin{vmatrix}
+					a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
+					a_{2 1} & a_{2 2} & \dots & a_{2 n } \\
+					           &             & \dots &              \\
+					a_{n 1} & a_{n 2} & \dots & a_{n n}					           
+				\end{vmatrix}
+			\end{equation}
+		\end{dfn}
+	
+
+		
+	\section{行列式の双線形性}
+		\begin{thm} 双線形性
+			\begin{enumerate}
+				\item a
+					\begin{equation}
+						\det(\va_1, \dots, \va_j' + \va_j'', \dots, \va_n) = \det(\va_1, \dots, \va_j', \dots, \va_n) + \det(\va_1, \dots, \va_j'', \dots, \va_n)  
+					\end{equation}
+				
+					\begin{equation}
+						\begin{vmatrix}
+							a_{1 1} & \dots & a_{1 j}' + a_{1 j}''  & \dots & a_{1 n} \\
+							           & \dots &   \dots                & \dots &           \\
+							a_{n 1} & \dots & a_{n j}' + a_{n j}'' & \dots & a_{n n}
+						\end{vmatrix} 
+						=
+						\begin{vmatrix}
+							a_{1 1} & \dots & a_{1 j}' & \dots & a_{1 n} \\
+							& \dots &   \dots                & \dots &           \\
+							a_{n 1} & \dots & a_{n j}' & \dots & a_{n n}
+						\end{vmatrix} 
+						+
+						\begin{vmatrix}
+							a_{1 1} & \dots & a_{1 j}''  & \dots & a_{1 n} \\
+							& \dots &   \dots                & \dots &           \\
+							a_{n 1} & \dots &  a_{n j}'' & \dots & a_{n n}
+						\end{vmatrix}
+					\end{equation}
+				\item b
+					\begin{equation}
+						\det(\va_1, \dots, \lambda \va_j, \dots, \va_n) = \lambda \det(\va_1, \dots, \va_j, \dots, \va_n)
+					\end{equation}
+					\begin{equation}
+						\begin{vmatrix}
+							a_{1 1} & \dots & \lambda a_{1 j} & \dots & a_{1 n} \\
+							& \dots &   \dots                & \dots &           \\
+							a_{n 1} & \dots & \lambda a_{n j}  & \dots & a_{n n}
+						\end{vmatrix} 
+						= \lambda
+						\begin{vmatrix}
+							a_{1 1} & \dots & a_{1 j} & \dots & a_{1 n} \\
+							& \dots &   \dots                & \dots &           \\
+							a_{n 1} & \dots & a_{n j} & \dots & a_{n n}
+						\end{vmatrix} 
+					\end{equation}
+			\end{enumerate}
+		\end{thm}
+
+		\begin{thm} $\tau \in S_n$
+			\begin{equation}
+				\det(\va_{\tau(1)}, \dots, \va_{\tau(j)}, \dots, \va_{\tau(n)}) = \sgn(\tau) \det(\va_1, \dots, \va_j, \dots, \va_n)
+			\end{equation}
+			\begin{equation}
+				\begin{vmatrix}
+					a_{1 \tau(1)} & \dots & \lambda a_{1 \tau(j)} & \dots & a_{1 \tau(n)} \\
+					& \dots &   \dots                & \dots &           \\
+					a_{n \tau(1)} & \dots & \lambda a_{n \tau(j)}  & \dots & a_{n \tau(n)}
+				\end{vmatrix} 
+				= \sgn(\tau)
+				\begin{vmatrix}
+					a_{1 1} & \dots & a_{1 j} & \dots & a_{1 n} \\
+					& \dots &   \dots                & \dots &           \\
+					a_{n 1} & \dots & a_{n j} & \dots & a_{n n}
+				\end{vmatrix} 
+			\end{equation}
+		\end{thm}
+
+		\begin{thm}
+			\begin{equation}
+				\det({}^t\!\mA) = \det(\mA)
+			\end{equation}
+		\end{thm}
+
+	
+	\section{行列式の展開}
+		\begin{dfn}
+			\begin{equation}
+				\mA_{i j} = \begin{pmatrix}
+						a_{1 1} & a_{1 2} & \dots & a_{1 j} & \dots & a_{1 n} \\
+						a_{2 1} & a_{2 2} & \dots & a_{2 j} & \dots & a_{2 n} \\
+						            &            & \dots &      &     & \\
+					   a_{i 1} & a_{i 2} & \dots & a_{i j} & \dots & a_{i n} \\
+						            &            & \dots &      &     & \\
+						a_{n 1} & a_{n 2} & \dots & a_{n j} & \dots & a_{n n} \\          
+					\end{pmatrix}
+			\end{equation}
+		\end{dfn}
+	
+		\begin{thm}
+			\begin{equation}
+				\det(\mA) = a_{i 1} \det(\mA_{1 i}) + \dots + a_{i j} \det(\mA_{i j}) + \dots + a_{i n} \det(\mA_{i n})
+			\end{equation}
+		\end{thm}
+
+\end{document}
