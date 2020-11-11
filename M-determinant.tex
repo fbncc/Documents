@@ -3,6 +3,71 @@
 \title{行列式}
 \begin{document}
 	
+	\section{数列}
+	
+	\section{総和 $\sum$}
+	
+		\begin{dfn}[総和] 数列 $\Set{a_i}$ の $a_1$ から $a_n$ までの総和 $\sum$ を帰納的に定義する．
+			\begin{align}
+				\sum_{i=1}^{1} a_{i} &:= a_1 \\
+				\sum_{i=1}^{n+1} a_i &:= \left( \sum_{i=1}^{n} a_i \right) + a_{n+1}
+			\end{align}
+		\end{dfn}
+	
+		\begin{eg} 総和を括弧 $( \  )$ で加法演算 $+$ の実行順序を表すと
+			\begin{equation}
+				\sum_{i=1}^n a_i = ((\dots((a_1) + a_2)+ \dots )+ a_{n-1}) + a_n
+			\end{equation}
+			となる．括弧の役割は，加法演算の実行順序を表す．実行順序を加法 $+$ への下付き数字で表すことにより，括弧をはずしてもよい．すなわち
+			\begin{equation}
+				a_1 +_{1} a_2 +_{2} \dots +_{n-2} \ \ a_{n-1} +_{n-1} a_n = \ ((\dots((a_1) + a_2)+ \dots )+ a_{n-1}) + a_n
+			\end{equation}
+			が成り立っている．
+			
+			例えば，加法の結合法則は，．
+			\begin{equation}
+				a + (b + c) = (a + b) + c
+			\end{equation}
+			であるから，この加法の実行順序を表すと
+			\begin{equation} 
+				a +_2 b +_1 c= a +_1 b +_2 c
+			\end{equation}
+			今，置換 $\sigma$ を
+			\begin{equation}
+				\sigma = 
+				\begin{pmatrix}
+					1 & 2 \\
+					2 & 1 
+				\end{pmatrix}
+			\end{equation}
+			とすれば，結合法則は
+			\begin{equation} 
+				a +_{\sigma(1)} \ \ b +_{\sigma(2)} \ \ c= a +_1 b +_2 c
+			\end{equation}
+			と表すことができる.
+			
+			$n$ 項の結合法則は隣り合う加法演算の順序を交換することにより，加法演算の順序が左から順番に演算することに等しいことができる．すなわち，
+			\begin{equation}
+				a_1 \ +_{\sigma(1)} \ a_2 \ +_{\sigma(2)}  \dots +_{\sigma(n-1)} \ a_n = a_1 \ +_1 \ a_2 \ +_2 \dots +_{n-1} \ a_n 
+			\end{equation}
+			が成り立つ．これは，任意の置換が隣接互換の積で表せることで\part{title}
+		\end{eg}
+	
+		\begin{thm}[一般の結合法則]　$n$ 項の加法は，加法の順番によらず，一定の値になる．すなわち，
+			\begin{equation}
+				a_1 \ +_{\sigma(1)} \ a_2 \ +_{\sigma(2)}  \dots +_{\sigma(n-1)} \ a_n = a_1 \ +_1 \ a_2 \ +_2 \dots +_{n-1} \ a_n 
+			\end{equation}
+		\end{thm}
+	
+		\begin{thm}[一般の交換法則]
+		\end{thm}
+	
+		\begin{dfn} 自然数の集合 $\N_1^n$ から集合 $\Lambda$ への全単射 $\varphi :  \N_1^n \map \Lambda$ が存在するとき, $\Lambda$ を添字集合とする数列　$\Set{a_\lambda}_{\lambda \in \Lambda} $ の総和 $\sum_{\lambda \in \Lambda} a_{\lambda}$ を次のように定義する．
+			\begin{equation}
+				\sum_{\lambda \in \Lambda} a_{\lambda} := \sum_{i=1}^n a_{\varphi(i)}
+			\end{equation}
+		\end{dfn}
+	
 	\section{行列式の定義}
 	
 		\begin{dfn}　行列 $\mA = (\va_1, \dots,\va_n) = (a_{i j})$ とするとき，この行列 $\mA$ の行列式 $\det(\mA)$ を次のように定義する．
