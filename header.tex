@@ -40,9 +40,9 @@
 % HyperRef
 \usepackage[pdfencoding=auto]{hyperref}
 
-% 索引の作成
-\usepackage{makeidx}
-\makeindex
+% 索引の作成 (headerに入れるとlatexmkでエラーが発生するので削除)
+%\usepackage{makeidx}
+%\makeindex
 
 %% tableofcontents level
 \setcounter{tocdepth}{1}
@@ -111,9 +111,11 @@
 
 \renewcommand{\iff}{\Leftrightarrow}
 \renewcommand{\implies}{\Rightarrow}
+\renewcommand{\lexor}{\veebar}
 
 % mathmatical Symbol
 \DeclareMathOperator{\Hom}{\mathrm{Hom}}
+\DeclareMathOperator{\Iso}{\mathrm{Iso}}
 \DeclareMathOperator{\Mor}{\mathrm{Mor}}
 \DeclareMathOperator{\Ob}{\mathrm{Ob}}
 
@@ -253,6 +255,35 @@
 \newcommand{\vy}{\boldsymbol{y}}
 \newcommand{\vz}{\boldsymbol{z}}
 
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
 \newcommand{\ldfn}{:\iff}
 \newcommand{\edfn}{:=}
 
@@ -266,8 +297,6 @@
 
 \newcommand{\eps}{\varepsilon}
 
-\usepackage{makeidx}
-\makeindex
 
 %%%%%%%%%%%%%%%%%%%%%% preamble end
 
