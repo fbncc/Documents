@@ -21,7 +21,7 @@
 			\section{$n$次行列式の定義}
 				\begin{dfn} $n$次正方行列$(a_{i j}) \ (i,j = 1 ,\dots,n)$の行列式 $\det(a_{ij})$ は次のように定義する．
 					\begin{equation}
-						\det(a_{i j}) \edfn \sum_{\sigma \in S_n} \sgn(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
+						\det(a_{i j}) := \sum_{\sigma \in S_n} \rm{sgn}(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
 					\end{equation}
 					また，行列式 $\det(a_{i j})$を
 					\begin{equation}
@@ -31,15 +31,15 @@
 							\vdots & \vdots & \dots & \vdots \\
 							a_{n 1} & a_{n 2} & \dots & a_{n n}
 						\end{vmatrix}
-						\edfn \det(a_{i j})
+						:= \det(a_{i j})
 					\end{equation}
 					で表し，行列$\vA$が$(a_{i j})$のとき，行列式 $\det(a_{i j})$ を
 					\begin{equation}
-						\det(\vA) \edfn \det(a_{i j})
+						\det(A)  \det(a_{i j})
 					\end{equation}
-					で表す．また，行列 $\vA$ が列ベクトル $\va_1, \va_2, \dots, \va_n$ で表されるとき，この行列式を
+					で表す．また，行列 $A$ が列ベクトル $a_1, a_2, \dots, a_n$ で表されるとき，この行列式を
 					\begin{equation}
-						\det(\va_1,\va_2, \dots, \va_n) \edfn \det(a_{i j})
+						\det(a_1,a_2, \dots, a_n) := \det(a_{i j})
 					\end{equation}
 					で表す．
 				\end{dfn}
