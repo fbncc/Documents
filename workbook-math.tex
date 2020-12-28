@@ -2,12 +2,23 @@
 %\documentclass{book}　%% make4htを行うときは，この行のコメントを外し，上の行をコメントとする．
 \input{I-header.tex}
 
+%%%
+\DeclareFontShape{JY3}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT3}{hmc}{m}{it}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY3}{hmc}{m}{sl}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JT3}{hmc}{m}{sl}{<->ssub*hmc/m/n}{}
+\DeclareFontShape{JY3}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
+\DeclareFontShape{JT3}{hgt}{m}{it}{<->ssub*hgt/m/n}{}
+\DeclareFontShape{JY3}{hgt}{m}{sl}{<->ssub*hgt/m/n}{}
+\DeclareFontShape{JT3}{hgt}{m}{sl}{<->ssub*hgt/m/n}{}
+
+
 % make4htを行うとき，コマンド：　make4ht -l xxxx.tex "index=2,3"  -l は Lualatex を使用する．
-\usepackage{alternative4ht}
-\altusepackage{fontspec}
-\altusepackage{xeCJK}
-\altusepackage{xunicode}
-\setCJKmainfont{IPAMincho}
+%\usepackage{alternative4ht}
+%\altusepackage{fontspec}
+%\altusepackage{xeCJK}
+%\altusepackage{xunicode}
+%\setCJKmainfont{IPAMincho}
 
 \begin{document}
 	\tableofcontents
