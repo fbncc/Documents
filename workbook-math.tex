@@ -1,14 +1,15 @@
-%\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
-\documentclass{book}　%% make4htを行うときは，この行のコメントを外し，上の行をコメントとする．
+\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
+%\documentclass{book}　%% make4htを行うときは，この行のコメントを外し，上の行をコメントとする．
 
 %\input{I-header}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
 
 % make4htを行うとき，コマンド：　make4ht -l xxxx.tex "index=2,3"  -l は Lualatex を使用する．
-\usepackage{alternative4ht}
-\altusepackage{fontspec}
-\altusepackage{xeCJK}
-\altusepackage{xunicode}
-\setCJKmainfont{IPAMincho}
+%\usepackage{alternative4ht}
+%\altusepackage{fontspec}
+%\altusepackage{xeCJK}
+%\altusepackage{xunicode}
+%\setCJKmainfont{IPAMincho}
 
 \begin{document}
 	\tableofcontents
@@ -19,7 +20,7 @@
 		\chapter{行列式}
 			\section{$3$次行列式}
 			\section{$n$次行列式の定義}
-				\begin{dfn} $n$次正方行列$(a_{i j}) \ (i,j = 1 ,\dots,n)$の行列式 $\det(a_{ij})$ は次のように定義する．
+%				\begin{dfn} $n$次正方行列$(a_{i j}) \ (i,j = 1 ,\dots,n)$の行列式 $\det(a_{ij})$ は次のように定義する．
 					\begin{equation}
 						\det(a_{i j}) := \sum_{\sigma \in S_n} \rm{sgn}(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
 					\end{equation}
@@ -33,7 +34,7 @@
 						\end{vmatrix}
 						:= \det(a_{i j})
 					\end{equation}
-					で表し，行列$\vA$が$(a_{i j})$のとき，行列式 $\det(a_{i j})$ を
+					で表し，行列$A$が$(a_{i j})$のとき，行列式 $\det(a_{i j})$ を
 					\begin{equation}
 						\det(A)  \det(a_{i j})
 					\end{equation}
@@ -42,7 +43,7 @@
 						\det(a_1,a_2, \dots, a_n) := \det(a_{i j})
 					\end{equation}
 					で表す．
-				\end{dfn}
+%			\end{dfn}
 				\subsection{加法と乗法}
 			        \subsubsection{加法}
 			        \subsubsection{総和}
