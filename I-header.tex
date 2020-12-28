@@ -26,7 +26,7 @@
 \usepackage{amsmath, amssymb, amsthm, amsfonts}
 \usepackage{mathrsfs,amsxtra}
 \usepackage{mathtools}
-%\mathtoolsset{showonlyrefs=true} % 参照したときのみ，行番号を振る。
+\mathtoolsset{showonlyrefs=true} % 参照したときのみ，行番号を振る。
 
 % arc
 %\usepackage{fourier-otf}
@@ -82,21 +82,33 @@
 \def\labelenumiii{\theenumiii)}
 \def\labelenumiv{\theenumiv)}
 
-% 論理記号
-\newcommand{\ldfn}{:\iff}
-\newcommand{\edfn}{:=}
-
-
-\newcommand{\SetZero}{\{0\}}
-
+% 略記号
 \newcommand{\etal}{\emph{et al}.}
 \newcommand{\ie}{\emph{i.e.,}}
 \newcommand{\as}{\emph{a.e.}}
 %\renewcommand{\eg}{\emph{e.g.,}}
 
+
+
+% 論理記号
+\newcommand{\ldfn}{:\iff}
+\newcommand{\edfn}{:=}
+
+\renewcommand{\iff}{\Leftrightarrow}         % 同値
+\renewcommand{\implies}{\Rightarrow}       % ならば
+\providecommand{\lxor}{\veebar}                % 排他的論理和
+\providecommand{\lfalse}{\bot}                   % 偽
+\providecommand{\ltre}{\top}                      % 真
+
+
+% 集合記号
+\newcommand{\SetZero}{\{0\}} % 零集合
+
+\renewcommand{\P}[1]{\mathfrak{P} #1}     % ベキ集合
+
 \newcommand{\eps}{\varepsilon}
 
-% mathematics symbols epi mono iso
+% 写像記号
 \newcommand{\hooklongrightarrow}{\lhook\joinrel\longrightarrow}
 \newcommand{\mapmono}{\hooklongrightarrow}
 \newcommand{\hooklongleftarrow}{\longleftarrow\joinrel\rhook}
@@ -116,7 +128,7 @@
 
 \newcommand{\map}{\longrightarrow}
 
-\renewcommand{\P}[1]{\mathfrak{P} #1}
+
 
 \newcommand{\vecb}[1]{\boldsymbol{#1}}
 \newcommand{\veca}[1]{\overrightarrow{#1}}
@@ -126,11 +138,7 @@
 
 \newcommand{\Sp}[1]{sp(#1)}
 
-\renewcommand{\iff}{\Leftrightarrow}
-\renewcommand{\implies}{\Rightarrow}
-\providecommand{\lxor}{\veebar}
-\providecommand{\lfalse}{\bot}
-\providecommand{\ltre}{\top}
+
 
 % mathmatical Symbol
 \DeclareMathOperator{\Hom}{\mathrm{Hom}}
