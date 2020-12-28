@@ -2,12 +2,12 @@
 %\documentclass{book}
 \input{I-header.tex}
 
-% make4htを行うとき，コマンド：　make4ht -l xxxx.tex "index=2,3"
-%\usepackage{alternative4ht}
-%\altusepackage{fontspec}
-%\altusepackage{xeCJK}
-%\altusepackage{xunicode}
-%\setCJKmainfont{IPAMincho}
+% make4htを行うとき，コマンド：　make4ht -l xxxx.tex "index=2,3"  -l は Lualatex を使用する．
+\usepackage{alternative4ht}
+\altusepackage{fontspec}
+\altusepackage{xeCJK}
+\altusepackage{xunicode}
+\setCJKmainfont{IPAMincho}
 
 \begin{document}
 	\tableofcontents
