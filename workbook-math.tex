@@ -1,13 +1,13 @@
-%\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
-\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
+\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
+%\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
 
 \input{I-header}
 
 % latex to html をする場合，次の4行のコメントを外す．
-\usepackage{alternative4ht}
-	\altusepackage{fontspec}
-	\altusepackage{xeCJK}
-	\altusepackage{xunicode}
+%\usepackage{alternative4ht}
+%	\altusepackage{fontspec}
+%	\altusepackage{xeCJK}
+%	\altusepackage{xunicode}
 
 \begin{document}
 	\tableofcontents
@@ -18,8 +18,27 @@
 					\begin{equation}
 						\det(\vA) \edfn \sum_{\sigma \in S_n} \sgn(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
 					\end{equation}
+					行列式 $\det(\vA)$ を，
+					\begin{equation}
+						\det(a_{i j})
+					\end{equation}
+					\begin{equation}
+						\begin{vmatrix}
+							a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
+							a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+							\vdots & \vdots & \dots & \vdots \\
+							a_{n 1} & a_{n 2} & \dots & a_{n n}
+						\end{vmatrix}
+					\end{equation}
+					と表すことがある．さらに，行列 $\vA$ を列ベクトル $\va_1,\va_2,\dots,\va_n$ で表すとき，
+					\begin{equation}
+						\det({\va_1,\va_2,\dots,\va_n})
+					\end{equation}
+					と表すことがある．
 				\end{dfn}
 				\subsubsection{有限集合}
+					\begin{dfn} 集合$A$が有限集合とは，自然数$n$から有限集合$A$への全単射が存在することである．
+					\end{dfn}
 				\subsubsection{数列}
 				\subsubsection{総和}
 				\subsubsection{総乗}
