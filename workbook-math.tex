@@ -10,17 +10,29 @@
 		\chapter{行列式}
 			\section{$3$次行列式}
 			\section{$n$次行列式の定義}
-				\begin{dfn} $n$次正方行列$(a_{i j})$の行列式は次のように定義する．
+				\begin{dfn} $n$次正方行列$(a_{i j}) \ (i,j = 1 ,\dots,n)$の行列式 $\det(a_{ij})$ は次のように定義する．
+					\begin{equation}
+						\det(a_{i j}) \edfn \sum_{\sigma \in S_n} \sgn(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
+					\end{equation}
+					また，行列式 $\det(a_{i j})$を
 					\begin{equation}
 						\begin{vmatrix}
 							a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
 							a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
-							\vdots & \vdots & \dots & \dots \\
-							a_{n 1} & a_{n 2} & \dots & a_{n n} 
+							\vdots & \vdots & \dots & \vdots \\
+							a_{n 1} & a_{n 2} & \dots & a_{n n}
 						\end{vmatrix}
-						\edfn \sum_{\sigma \in S_n} \sgn(\sigma) \prod_{j=1}^{n} a_{\sigma(j) 1}
+						\edfn \det(a_{i j})
 					\end{equation}
-					行列$(a_{i j})$が$\vA$で表されるとき， 
+					で表し，行列$\vA$が$(a_{i j})$のとき，行列式 $\det(a_{i j})$ を
+					\begin{equation}
+						\det(\vA) \edfn \det(a_{i j})
+					\end{equation}
+					で表す．また，行列 $\vA$ が列ベクトル $\va_1, \va_2, \dots, \va_n$ で表されるとき，この行列式を
+					\begin{equation}
+						\det(\va_1,\va_2, \dots, \va_n) \edfn \det(a_{i j})
+					\end{equation}
+					で表す．
 				\end{dfn}
 				\subsection{加法と乗法}
 			        \subsubsection{加法}
