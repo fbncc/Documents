@@ -11,6 +11,16 @@
 
 \begin{document}
 	\tableofcontents
+	\part{実数}
+	\part{微分積分}
+		\chapter{三角函数}
+			\section{公式}
+				\begin{thm}[加法定理]
+						\begin{align}
+							\cos(x+y) &= \cos(x)\cos(y) - \sin(x)\sin(y) \\
+							\sin(x+y) &= \sin(x) \cos(y) + \cos(x)\sin(y)
+						\end{align}
+				\end{thm}					
 	\part{線形代数}
 		\chapter{行列式}
 			\subsection{行列式の定義}
@@ -63,9 +73,9 @@
 				\subsubsection{総和}
 					\begin{dfn} 数列 $\{a_i\}_{i=0}^{n}$ の総和を次のように定義する．
 						\begin{equation}
-							\sum_{i=0}^{n} a_i \edfn \begin{cases}
+							\sum_{i=0}^{l} a_i \edfn \begin{cases}
 								a_0 & n = 0 \\
-								\sum_{i=0}^{n-1} a_i + a_{n} &  0 < n
+								\sum_{i=0}^{l-1} a_i + a_{l} &  0 < l <n
 							\end{cases}
 						\end{equation}
 					\end{dfn}
@@ -79,6 +89,12 @@
 					\begin{thm}[結合法則]　数列 $\{a_i\}_{i=0}^{n}$ について，次の一般結合法則が成り立つ．
 						\begin{equation}
 							0 \le \forall k < n ; \sum_{i=0}^{k} a_i + \sum_{i=k+1}^{n} a_i = \sum_{i=0}^{n} a_i
+						\end{equation} 
+					\end{thm}
+				
+					\begin{thm}[交換法則]　数列 $\{a_i\}_{i=0}^{\infty}$ について，次の一般交換法則が成り立つ．
+						\begin{equation}
+							\forall \sigma \in S_n ; \sum_{i=0}^{n} a_{\sigma(i)}  = \sum_{i=0}^{n} a_i
 						\end{equation} 
 					\end{thm}
 				\subsubsection{総乗}
