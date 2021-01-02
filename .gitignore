@@ -19,4 +19,12 @@
 *.synctex.gz
 *.tar.gz
 
+*.4ct
+*.4tc
+*.idv
+*.lg
+*.tmp
+*.xref
+
+
 *.o
