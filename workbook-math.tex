@@ -1,4 +1,4 @@
-\documentclass[autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
+\documentclass[leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
 %\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
 
 \input{I-header}
@@ -35,21 +35,134 @@
 					\end{equation}
 				\end{thm}
 			
-				\begin{thm}[二倍角の公式]
+				\begin{thm}[倍角の公式]
+					\begin{align}
+						\cos(2x) &= \cos^2(x) - \sin^2(x) \\
+						              &= 2 \cos^2(x) -1 \\
+						              &= 1 -2 \sin^2(x) \\
+						\sin(2x) &= 2\sin(x)\cos(x) \\
+						\tan(2x) &= \frac{2\tan(x)} {1 - \tan^2(x)} 
+					\end{align}
 				\end{thm}
 			
 				\begin{thm}[半角の公式]
+					\begin{align}
+						\cos^2 \left( \frac{x}{2} \right) &= \frac{1 + \cos(x)}{2} \\
+						\sin^2 \left( \frac{x}{2} \right) &= \frac{1 - \cos(x)}{2} \\
+						\tan^2 \left( \frac{x}{2} \right) &= \frac{1 - \cos(x)} {1 + \cos(x)}
+					\end{align}
 				\end{thm}
 			
 				\begin{thm}[和積公式]
+					\begin{align}
+						\cos(x) + \cos(y) &= 2 \sin \left( \frac{x+y}{2} \right) \cos \left( \frac{x+y}{2} \right) \\
+						\cos(x) - \cos(y) &= -2 \sin \left( \frac{x+y}{2} \right) \cos \left( \frac{x+y}{2} \right) \\
+						\sin(x) + \sin(y) &= 2 \cos \left( \frac{x+y}{2} \right) \cos \left( \frac{x+y}{2} \right) 
+					\end{align}
 				\end{thm}
 			
 				\begin{thm}[積和公式]
+						\begin{align}
+							\cos(x) \cos(y) &= \frac{1}{2} (\cos(x+y) + \cos(x-y)) \\
+							\sin(x) \sin(y) &= -\frac{1}{2} (\cos(x+y) - \cos(x-y)) \\
+							\sin(x) \cos(y) &=  \frac{1}{2} (\sin(x+y) + \sin(x-y))
+						\end{align}
+				\end{thm}
+			
+				\begin{thm}[負角公式]
+					\begin{align}
+						\cos(-x) &= \cos(x) \\
+						\sin(-x) &= - \sin(x) \\
+						\tan(-x) &= - \tan(x)
+					\end{align}
+				\end{thm}
+			
+				\begin{thm}[余角公式]
+					\begin{align}
+						\cos\left( \frac{\pi}{2} - x \right) & = \cos(x) \\
+						\sin\left( \frac{\pi}{2} - x \right) & = \sin(x) \\
+						\tan\left( \frac{\pi}{2} - x \right) & = \cot(x)
+					\end{align}
 				\end{thm}
 				
+				\begin{thm}[補角公式]
+					\begin{align}
+						\cos(\pi -x) &= -\cos(x) \\
+						\sin(\pi-x) &= \sin(x) \\
+						\tan(\pi-x) &= - \tan(x)
+					\end{align}
+				\end{thm}
 	\part{線形代数}
 		\chapter{行列式}
-			\subsection{行列式の定義}
+			\section{集合}
+				\begin{dfn} 自然数 $n$ の切片 $\N[n]$ を，次のように定義する．
+					\begin{equation}
+						\N(n) \edfn \{ x \in \N ; 0 \le x < n \}
+					\end{equation}
+				\end{dfn}
+				\begin{dfn} 集合$A$が有限集合とは，ある自然数$n$の切片$\N(n)$から有限集合$A$への全単射が存在することである．すなわち，
+					\begin{equation}
+						\exists n \in \N ; \exists \varphi : \N(n) \map A; \varphi : \text{全単射}
+					\end{equation}
+					である．
+				\end{dfn}
+			\section{置換}
+				\subsection{置換の定義}
+				\subsection{あみだくじ}
+				\subsection{偶置換と奇置換}
+				\subsection{$\sgn$ 函数}
+			\section{実数の四則演算}
+					
+					\subsubsection{数列}
+					\begin{dfn}[有限列]　ある自然数 $n$ から実数の集合 $\R$ への写像$a$を実数の有限列といい，$\{ a_{i} \}_{i=0}^{n-1}$で表す．すなわち，
+						\begin{equation}
+							\{a_i\}_{i=0}^{n-1} \ldfn a: \N(n) \map \R
+						\end{equation}
+					\end{dfn}
+					\begin{dfn}[無限列]　自然数の集合 $\N$ から実数の集合 $\R$ への写像$a$を実数の有限列といい，$\{ a_{i} \}_{i=0}^{\infty}$で表す．すなわち，
+						\begin{equation}
+							\{a_i\}_{i=0}^{\infty} \ldfn a: \N \map \R
+						\end{equation}
+					\end{dfn}
+				
+					\subsubsection{総和}
+						\begin{dfn} 数列 $\{a_i\}_{i=0}$ の総和を次のように定義する．
+							\begin{equation}
+								\sum_{i=0}^{n} a_i \edfn \begin{cases}
+									a_0 & n = 0 \\
+									\sum_{i=0}^{n-1} a_i + a_{n} &  0 < n
+								\end{cases}
+							\end{equation}
+						\end{dfn}
+					
+					\begin{dfn} $l,n$が自然数のとき，数列 $\{a_i\}_{i=0}^{\infty}$　の $l$ 項から $l + n$ 項までの総和を次のように定義する．
+						\begin{equation}
+							\sum_{i=l}^{l+n} a_i \edfn \sum_{i=0}^{n} a_{l+i}
+						\end{equation}
+					\end{dfn}
+					
+					\begin{thm}[結合法則]　数列 $\{a_i\}_{i=0}^{n}$ について，次の一般結合法則が成り立つ．
+						\begin{equation}
+							0 \le \forall k < n ; \sum_{i=0}^{k} a_i + \sum_{i=k+1}^{n} a_i = \sum_{i=0}^{n} a_i
+						\end{equation} 
+					\end{thm}
+					
+					\begin{thm}[交換法則]　数列 $\{a_i\}_{i=0}^{\infty}$ について，次の一般交換法則が成り立つ．
+						\begin{equation}
+							\forall \sigma \in S_n ; \sum_{i=0}^{n} a_{\sigma(i)}  = \sum_{i=0}^{n} a_i
+						\end{equation} 
+					\end{thm}
+					\subsubsection{総乗}
+					\begin{dfn} 数列 $\{a_i\}_{i=0}^{n}$ の総乗を次のように定義する．
+						\begin{equation}
+							\prod_{i=0}^{n} a_i \edfn \begin{cases}
+								a_0 & n = 0 \\
+								\prod_{i=0}^{n-1} a_i + a_{n} &  0 < n
+							\end{cases}
+						\end{equation}
+					\end{dfn}
+
+			\section{行列式の定義}
 				\begin{dfn}[行列式]　$n$次正方行列 $\vA=(a_{i j})$ の行列式 $\det(\vA)$ を次のように定義する．
 					\begin{equation}
 						\det(\vA) \edfn \sum_{\sigma \in S_n} \sgn(\sigma) \prod_{j=1}^{n} a_{\sigma(j) j}
@@ -72,64 +185,140 @@
 					\end{equation}
 					と表すことがある．
 				\end{dfn}
-				\subsubsection{有限集合}
-					\begin{dfn} 自然数 $n$ の切片 $\N[n]$ を，次のように定義する．
-						\begin{equation}
-							\N(n) \edfn \{ x \in \N ; 0 \le x < n \}
-						\end{equation}
-					\end{dfn}
-					\begin{dfn} 集合$A$が有限集合とは，ある自然数$n$の切片$\N(n)$から有限集合$A$への全単射が存在することである．すなわち，
-						\begin{equation}
-						\exists n \in \N ; \exists \varphi : \N(n) \map A; \varphi : \text{全単射}
-						\end{equation}
-						である．
-					\end{dfn}
+			
+				\begin{thm} 転置行列 $ ^{t}\vA$ の行列式 $\det( ^{t}\vA)$ は，元の行列 $\vA$ の行列式 $\det(\vA)$ と等しい．すなわち，
+					\begin{equation}
+						\det( ^{t}\vA) = \det{\vA} 
+					\end{equation}
+					が成り立つ．
+				\end{thm}
+
+				\section{行列式の展開}
 				
-				\subsubsection{数列}
-					\begin{dfn}[有限列]　ある自然数 $n$ から実数の集合 $\R$ への写像$a$を実数の有限列といい，$\{ a_{i} \}_{i=0}^{n-1}$で表す．すなわち，
+					\begin{thm}
 						\begin{equation}
-							\{a_i\}_{i=0}^{n-1} \ldfn a: \N(n) \map \R
+							\begin{vmatrix}
+								a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix}
+							= \begin{vmatrix}
+								a_{1 1} & 0 & \dots & 0 \\
+								0 & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								0 & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix}
+							+ \begin{vmatrix}
+								0 & a_{1 2} & \dots & 0 \\
+								a_{2 1} & 0 & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & 0 & \dots & a_{n n}
+							\end{vmatrix}
+							+ \dots + \begin{vmatrix}
+								0 & \dots & 0 & a_{1 n} \\
+								a_{2 1} & \dots & a_{2 n-1} & 0 \\
+								\vdots & \dots & \vdots & \vdots \\
+								a_{n 1} & \dots & a_{n n-1} & 0
+							\end{vmatrix}
 						\end{equation}
-					\end{dfn}
-					\begin{dfn}[無限列]　自然数の集合 $\N$ から実数の集合 $\R$ への写像$a$を実数の有限列といい，$\{ a_{i} \}_{i=0}^{\infty}$で表す．すなわち，
-						\begin{equation}
-							\{a_i\}_{i=0}^{\infty} \ldfn a: \N \map \R
-						\end{equation}
-				\end{dfn}
-				\subsubsection{総和}
-					\begin{dfn} 数列 $\{a_i\}_{i=0}^{n}$ の総和を次のように定義する．
-						\begin{equation}
-							\sum_{i=0}^{l} a_i \edfn \begin{cases}
-								a_0 & n = 0 \\
-								\sum_{i=0}^{l-1} a_i + a_{l} &  0 < l <n
-							\end{cases}
-						\end{equation}
-					\end{dfn}
-				
-					\begin{dfn} 数列 $\{a_i\}_{i=0}^{\infty}$ のを次のように定義する．
-						\begin{equation}
-							\sum_{i=l}^{l+n} a_i \edfn \sum_{i=0}^{n} a_{k+i}
-						\end{equation}
-					\end{dfn}
-				
-					\begin{thm}[結合法則]　数列 $\{a_i\}_{i=0}^{n}$ について，次の一般結合法則が成り立つ．
-						\begin{equation}
-							0 \le \forall k < n ; \sum_{i=0}^{k} a_i + \sum_{i=k+1}^{n} a_i = \sum_{i=0}^{n} a_i
-						\end{equation} 
 					\end{thm}
-				
-					\begin{thm}[交換法則]　数列 $\{a_i\}_{i=0}^{\infty}$ について，次の一般交換法則が成り立つ．
+					\begin{proof}
+						\begin{align}
+							\begin{vmatrix}
+								a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix}
+							&= \begin{vmatrix}
+								a_{1 1} + 0 & a_{1 2} & \dots & a_{1 n} \\
+								0 + a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								0 + a_{n 1} & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix} \\
+							&= \begin{vmatrix}
+								a_{1 1} & a_{1 2} & \dots & a_{1 n} \\
+								0  & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								0 & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix} 
+							+
+							\begin{vmatrix}
+								0 & a_{1 2} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix} \\
+							&= \begin{vmatrix}
+								a_{1 1} & 0 & \dots & 0 \\
+								0  & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								0 & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix} 
+							+
+							\begin{vmatrix}
+								0 & a_{1 2} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & \dots & a_{n n}
+							\end{vmatrix}
+						\end{align}
+					
+						\begin{align}
+							\begin{vmatrix}
+								0 & a_{1 2} & a_{1 3} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & a_{2 3} & \dots & a_{2 n} \\
+								\vdots & \vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix}
+							&= \begin{vmatrix}
+								0 & a_{1 2} + 0 & a_{1 3} & \dots & a_{1 n} \\
+								a_{2 1} & 0+ a_{2 2} & a_{2 3} & \dots & a_{2 n} \\
+								\vdots & \vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & 0 + a_{n 2} & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix} \\
+							&= \begin{vmatrix}
+								0 & a_{1 2} & a_{1 3} & \dots & a_{1 n} \\
+								a_{2 1}  & 0 & a_{2 3}& \dots & a_{2 n} \\
+								\vdots & \vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & 0 & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix} 
+							+
+							\begin{vmatrix}
+								0 & 0  & a_{1 3} & \dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & a_{2 3} & \dots & a_{2 n} \\
+								\vdots & \vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix} \\
+							&= \begin{vmatrix}
+								0 & a_{1 2} & a_{1 3} & \dots & 0 \\
+								a_{2 1}  & 0 & a_{2 3} & \dots & a_{2 n} \\
+								\vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & 0 & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix} 
+							+
+							\begin{vmatrix}
+								0 & 0 & a_{1 3} &\dots & a_{1 n} \\
+								a_{2 1} & a_{2 2} & a_{2 3} & \dots & a_{2 n} \\
+								\vdots & \vdots & \vdots & \dots & \vdots \\
+								a_{n 1} & a_{n 2} & a_{n 3} & \dots & a_{n n}
+							\end{vmatrix}
+						\end{align}
+					
 						\begin{equation}
-							\forall \sigma \in S_n ; \sum_{i=0}^{n} a_{\sigma(i)}  = \sum_{i=0}^{n} a_i
-						\end{equation} 
-					\end{thm}
-				\subsubsection{総乗}
-					\begin{dfn} 数列 $\{a_i\}_{i=0}^{n}$ の総乗を次のように定義する．
-						\begin{equation}
-							\prod_{i=0}^{n} a_i \edfn \begin{cases}
-								a_0 & n = 0 \\
-								\prod_{i=0}^{n-1} a_i + a_{n} &  0 < n
-							\end{cases}
+							\begin{vmatrix}
+								0 &   \dots & 0 & a_{1 n} \\
+								a_{2 1} & \dots & a_{2 n-1} & a_{2 n} \\
+								\vdots & \dots & \vdots & \vdots \\
+								a_{n 1} & \dots & a_{n n-1}  & a_{n n}
+							\end{vmatrix}
+							= \begin{vmatrix}
+								0 &   \dots & 0 & a_{1 n} \\
+								a_{2 1} & \dots & a_{2 n-1} & 0 \\
+								\vdots & \dots & \vdots & \vdots \\
+								a_{n 1} & \dots & a_{n n-1}  & 0
+							\end{vmatrix}
 						\end{equation}
-					\end{dfn}	
+					\end{proof}
 \end{document}
