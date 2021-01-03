@@ -15,14 +15,24 @@
 		\chapter{Tex4ht}
 			Latexからhtmlに変換するAppを使って見た．
 			\section{日本語を扱うための準備}
+			次の条件が必要です．
+			\begin{enumerate}
+				\item Lualatexを使う．
+				\item alternative4ht　を使う．
+			\end{enumerate}
+		
+			Lualatexは多分インストールされているとして，alternative4htをインストールする．
+			インストール方法は，ググっていただきたい．概略は次の通り．
+			\begin{enumerate}
+				\item ディレクトリ texmf-local または kpsewhich -var-value TEXMFHOME の
+			\end{enumerate}
 			\section{ソースファイル}
 			日本語が入ったlatexソースファイルをそのままTex4htが扱えないので，次の２点についてソースファイルを修正する．
-			
 				\begin{enumerate}
 					\item documentclass を book にする．
 					\item alternative4ht を読み込む．
 				\end{enumerate}
-		　　　　
+			例えば，次の例のように，latex用のdocumentclass文とTex4ht用のdocumentclassの2つを用意して，htmlに変換するときだけコメントを外すようにしている．
 				\begin{verbatim}
 						%\documentclass[leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
 						\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
