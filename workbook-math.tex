@@ -1,13 +1,13 @@
-%\documentclass[leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
-\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
+\documentclass[leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
+%\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
 
 \input{I-header}
 
 % latex to html をする場合，次の4行のコメントを外す．
-\usepackage{alternative4ht}
-	\altusepackage{fontspec}
-	\altusepackage{xeCJK}
-	\altusepackage{xunicode}
+%\usepackage{alternative4ht}
+%	\altusepackage{fontspec}
+%	\altusepackage{xeCJK}
+%	\altusepackage{xunicode}
 
 \begin{document}
 	\tableofcontents
@@ -17,7 +17,7 @@
 			\section{日本語を扱うための準備}
 			\section{ソースファイル}
 			\section{htmlへの変換}
-
+				make4ht -l  workbook-math.tex "index=2,3"~
 	\part{git /cdot gihub}
 	\part{実数}
 	\part{微分積分}
