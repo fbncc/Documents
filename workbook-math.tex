@@ -19,17 +19,18 @@
 					次の条件が必要です．
 					\begin{enumerate}
 						\item Lualatexを使う．
-						\item alternative4ht　を使う．
+						\item helpers4htを使う．
 					\end{enumerate}
 				
-					Lualatexは多分インストールされているので，alternative4htをインストールする．
+					Lualatexは多分インストールされているので，alternative4ht ( \url{https://github.com/michal-h21/helpers4ht} )
+					をインストールする．
 					インストール方法は，ググって調べました．私は，ここ \url{https://qiita.com/toyolab/items/12ac4fb95fcf211ccf62} を参考にしました．
 			
 				\subsection{Latexファイルの修正}
 					日本語が入ったlatexソースファイルをそのままTex4htが扱えないので，次の２点についてソースファイルを修正する．
 						\begin{enumerate}
 							\item documentclass を book にする．
-							\item alternative4ht を読み込む．
+							\item alternative4ht 他のパッケージを読み込む．
 						\end{enumerate}
 					例えば，次の例のように，latex用のdocumentclass文とTex4ht用のdocumentclassの2つを用意して，htmlに変換するときだけコメントを外すようにしている．
 						\begin{verbatim}
@@ -47,9 +48,15 @@
 								\end{document}
 						\end{verbatim}
 			\section{htmlへの変換}
+				Latexソースファイルにエラーがなければ，次のコマンド
 				\begin{quote}
-					make4ht -l  workbook-math.tex "index=2,3"
+					make4ht -l  ほげほげ.tex "index=2,3"
 				\end{quote}
+			を入力すれば，htmlファイルができる．
+			
+			-l はluatexを使うフラグで，"index=2,3" はhtmlを章ごとにhtmlファイルを作成する指示です．
+			
+			詳しくは，マニュアル
 	\part{git /cdot gihub}
 	\part{実数}
 	\part{微分積分}
