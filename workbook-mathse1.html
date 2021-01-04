@@ -1,255 +1,67 @@
 <!DOCTYPE html> 
 <html xml:lang='en-US' lang='en-US'> 
-<head><title>公式</title> 
+<head><title>日本語を扱うための準備</title> 
 <meta charset='utf-8' /> 
 <meta name='generator' content='TeX4ht (http://www.tug.org/tex4ht/)' /> 
 <meta name='viewport' content='width=device-width,initial-scale=1' /> 
-<link type='text/css' href='workbook-math.css' rel='stylesheet' /> 
+<link rel='stylesheet' type='text/css' href='workbook-math.css' /> 
 <meta name='src' content='workbook-math.tex' /> 
 </head><body>
-<!-- l. 17 --><div class='crosslinks'><p class='noindent'>[<a href='#tailworkbook-mathse1.html'>tail</a>] [<a href='workbook-mathch1.html#workbook-mathse1.html'>up</a>] </p></div>
-<h3 class='sectionHead'><span class='titlemark'>1.1   </span> <a id='x6-50001.1'></a>公式</h3>
-<div class='newtheorem'>
-<!-- l. 18 --><p class='noindent'><span class='head'>
-<a id='x6-5001r1'></a>
-<span class='rm-lmbx-10'>1.1.1 </span>(加法定理)<span class='rm-lmbx-10'>.</span>  
-</span>
-</p><table class='align'>                
-<tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>                
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>) </span><span class='cmsy-10'>− </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)sin(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>                
-                
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>                
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>) + </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)sin(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>                
-                
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>                
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='tan(x)+-tan(y)--
-1− tan(x )tan(y)' src='workbook-math0x.png' /></td>                        
-                
-<td class='align-label'>                </td></tr></table>
+<!-- l. 17 --><div class='crosslinks'><p class='noindent'>[<a href='workbook-mathse2.html'>next</a>] [<a href='#tailworkbook-mathse1.html'>tail</a>] [<a href='workbook-mathch1.html#workbook-mathse1.html'>up</a>] </p></div>
+<h3 class='sectionHead'><span class='titlemark'>1.1   </span> <a id='x5-40001.1'></a>日本語を扱うための準備</h3>
+<!-- l. 18 --><p class='noindent'>
+</p>   
+<h4 class='subsectionHead'><span class='titlemark'>(1)   </span> <a id='x5-5000(1)'></a>条件</h4>
+<!-- l. 19 --><p class='noindent'>次の条件が必要です．
+</p>     
+<ol class='enumerate1'>
+<li class='enumerate' id='x5-5002x1'>     
+Lualatexを使う．
+</li>     
+<li class='enumerate' id='x5-5004x2'>
+helpers4htを使う．</li></ol>
+<!-- l. 25 --><p class='indent'>   Lualatexは多分インストールされているので，helpers4ht ( <a class='url' href='https://github.com/michal-h21/helpers4ht'><span class='rm-lmtt-10'>https://github.com/michal-h21/helpers4ht</span></a> )
+をインストールする． インストール方法は，ググって調べました．私は，ここ <a class='url' href='https://qiita.com/toyolab/items/12ac4fb95fcf211ccf62'><span class='rm-lmtt-10'>https://qiita.com/toyolab/items/12ac4fb95fcf211ccf62</span></a>
+を参考にしました．
+</p><!-- l. 29 --><p class='noindent'>
+</p>   
+<h4 class='subsectionHead'><span class='titlemark'>(2)   </span> <a id='x5-6000(2)'></a>Latexファイルの修正</h4>
+<!-- l. 30 --><p class='noindent'>日本語が入ったlatexソースファイルをそのままTex4htが扱えないので，次の２点についてソースファイルを修正する．
                                                                   
 
                                                                   
-</div>   
-<div class='newtheorem'>
-<!-- l. 26 --><p class='noindent'><span class='head'>
-<a id='x6-5002r2'></a>
-<span class='rm-lmbx-10'>1.1.2 </span>(ピタゴラスの基本三角函数公式)<span class='rm-lmbx-10'>.</span>  
-</span>
+</p>     
+<ol class='enumerate1'>
+<li class='enumerate' id='x5-6002x1'>     
+documentclass を book にする．
+</li>     
+<li class='enumerate' id='x5-6004x2'>
+alternative4ht 他のパッケージを読み込む．</li></ol>
+<!-- l. 35 --><p class='noindent'>例えば，次の例のように，latex用のdocumentclass文とTex4ht用のdocumentclassの2つを用意して，htmlに変換するときだけコメントを外すようにしている．
+                                                                  
+
+                                                                  
 </p>   
-<table class='equation'><tr><td>
-<center class='math-display'>
-<img src='workbook-math1x.png' class='math-display' alt='cos2(x)+ sin2(x) = 1
-' /></center></td><td class='equation-label'></td></tr></table>
-<!-- l. 29 --><p class='nopar'>
-</p>   
+<div class='verbatim' id='verbatim-1'>
+%\documentclass[leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard,a4paper,12pt]{bxjsbook}
+ <br />\documentclass{book} %% make4htを使うときはこの行のコメントを外し，上の行をコメントにする．
+ <br />
+ <br />% latex to html をする場合，次の4行のコメントを外す．
+ <br />\usepackage{alternative4ht}
+ <br />\altusepackage{fontspec}
+ <br />\altusepackage{xeCJK}
+ <br />\altusepackage{xunicode}
+ <br />
+ <br />\begin{document}
+ <br />本文
+ <br />\end{document}
 </div>
-<div class='newtheorem'>
-<!-- l. 32 --><p class='noindent'><span class='head'>
-<a id='x6-5003r3'></a>
-<span class='rm-lmbx-10'>1.1.3.</span>  
-</span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) </span>の　<span class='cmmi-10'>x </span><span class='cmr-10'>= 0</span>　のときの微分係数
+<!-- l. 49 --><p class='nopar'>
+                                                                  
+
+                                                                  
 </p>   
-<table class='equation'><tr><td>
-<center class='math-display'>
-<img src='workbook-math2x.png' class='math-display' alt='       ||
-d--sin(x)||   =  lim sin-(h) = 1
-dx      x=0  h→0   h
-' /></center></td><td class='equation-label'></td></tr></table>
-                                                                  
-
-                                                                  
-<!-- l. 35 --><p class='nopar'>
-</p>   
-</div>
-<div class='newtheorem'>
-<!-- l. 38 --><p class='noindent'><span class='head'>
-<a id='x6-5004r4'></a>
-<span class='rm-lmbx-10'>1.1.4 </span>(倍角の公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-</p><table class='align'>                     
-<tr><td class='align-odd'><span class='cmr-10'>cos(2</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                      
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>cos</span><sup><span class='cmr-7'>2</span></sup><span class='cmr-10'>(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) </span><span class='cmsy-10'>− </span><span class='cmr-10'>sin</span><sup><span class='cmr-7'>2</span></sup><span class='cmr-10'>(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                     
-                     
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'></td>                                                 
-<td class='align-even'> <span class='cmr-10'>= 2cos</span><sup><span class='cmr-7'>2</span></sup><span class='cmr-10'>(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) </span><span class='cmsy-10'>− </span><span class='cmr-10'>1</span></td>                         
-                     
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'></td>                                                 
-<td class='align-even'> <span class='cmr-10'>= 1 </span><span class='cmsy-10'>− </span><span class='cmr-10'>2sin</span><sup><span class='cmr-7'>2</span></sup><span class='cmr-10'>(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-                     
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(2</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                      
-<td class='align-even'> <span class='cmr-10'>= 2sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-                     
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan(2</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                     
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='  2tan(x)
-------2---
-1 − tan (x)' src='workbook-math3x.png' /></td>                          
-                     
-<td class='align-label'>                     </td></tr></table>
-</div>   
-<div class='newtheorem'>
-<!-- l. 48 --><p class='noindent'><span class='head'>
-<a id='x6-5005r5'></a>
-<span class='rm-lmbx-10'>1.1.5 </span>(半角の公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-                                                                  
-
-                                                                  
-</p><table class='align'>                       
-<tr><td class='align-odd'><span class='cmr-10'>cos</span><sup><span class='cmr-7'>2</span></sup><img align='middle' class='left' alt='(x-)
- 2' src='workbook-math4x.png' /></td>                       
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='1+-cos(x)
-    2' src='workbook-math5x.png' /></td>                       
-                       
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin</span><sup><span class='cmr-7'>2</span></sup><img align='middle' class='left' alt='(x)
- 2' src='workbook-math6x.png' /></td>                        
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='1−-cos(x)
-    2' src='workbook-math7x.png' /></td>                       
-                       
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan</span><sup><span class='cmr-7'>2</span></sup><img align='middle' class='left' alt='(x )
- -2' src='workbook-math8x.png' /></td>                       
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='1− cos(x)
-1+-cos(x)' src='workbook-math9x.png' /></td>                       
-                       
-<td class='align-label'>                       </td></tr></table>
-</div>   
-<div class='newtheorem'>
-<!-- l. 56 --><p class='noindent'><span class='head'>
-<a id='x6-5006r6'></a>
-<span class='rm-lmbx-10'>1.1.6 </span>(和積公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-                                                                  
-
-                                                                  
-</p><table class='align'>             
-<tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) + </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>             
-<td class='align-even'> <span class='cmr-10'>= 2sin</span><img align='middle' class='left' alt='(x + y)
- -----
-   2' src='workbook-math10x.png' /><span class='cmr-10'>cos</span><img align='middle' class='left' alt='(x + y)
- -----
-   2' src='workbook-math11x.png' /></td>               
-             
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) </span><span class='cmsy-10'>− </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>             
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><span class='cmr-10'>2sin</span><img align='middle' class='left' alt='(     )
-  x+-y-
-   2' src='workbook-math12x.png' /><span class='cmr-10'>cos</span><img align='middle' class='left' alt='(      )
-  x+-y-
-    2' src='workbook-math13x.png' /></td>             
-             
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>) + </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>              
-<td class='align-even'> <span class='cmr-10'>= 2cos</span><img align='middle' class='left' alt='(     )
- x-+-y
-   2' src='workbook-math14x.png' /><span class='cmr-10'>cos</span><img align='middle' class='left' alt='(     )
-  x+-y-
-   2' src='workbook-math15x.png' /></td>               
-             
-<td class='align-label'>             </td></tr></table>
-</div>   
-<div class='newtheorem'>
-<!-- l. 64 --><p class='noindent'><span class='head'>
-<a id='x6-5007r7'></a>
-<span class='rm-lmbx-10'>1.1.7 </span>(積和公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-</p><table class='align'>               
-<tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>               
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='1
-2' src='workbook-math16x.png' /><span class='cmr-10'>(cos(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>) + </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x </span><span class='cmsy-10'>− </span><span class='cmmi-10'>y</span><span class='cmr-10'>))</span></td>                
-               
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)sin(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>               
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><img align='middle' class='frac' alt='1
-2' src='workbook-math17x.png' /><span class='cmr-10'>(cos(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>) </span><span class='cmsy-10'>− </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x </span><span class='cmsy-10'>− </span><span class='cmmi-10'>y</span><span class='cmr-10'>))</span></td>               
-               
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)cos(</span><span class='cmmi-10'>y</span><span class='cmr-10'>)</span></td>               
-<td class='align-even'> <span class='cmr-10'>=</span> <img align='middle' class='frac' alt='1
-2' src='workbook-math18x.png' /><span class='cmr-10'>(sin(</span><span class='cmmi-10'>x </span><span class='cmr-10'>+ </span><span class='cmmi-10'>y</span><span class='cmr-10'>) + </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x </span><span class='cmsy-10'>− </span><span class='cmmi-10'>y</span><span class='cmr-10'>))</span></td>                
-               
-<td class='align-label'>               </td></tr></table>
-                                                                  
-
-                                                                  
-</div>   
-<div class='newtheorem'>
-<!-- l. 72 --><p class='noindent'><span class='head'>
-<a id='x6-5008r8'></a>
-<span class='rm-lmbx-10'>1.1.8 </span>(負角公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-</p><table class='align'>                         
-<tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmsy-10'>−</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                           
-                         
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmsy-10'>−</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-                         
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan(</span><span class='cmsy-10'>−</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><span class='cmr-10'>tan(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                         
-                         
-<td class='align-label'>                         </td></tr></table>
-</div>   
-<div class='newtheorem'>
-<!-- l. 80 --><p class='noindent'><span class='head'>
-<a id='x6-5009r9'></a>
-<span class='rm-lmbx-10'>1.1.9 </span>(余角公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-                                                                  
-
-                                                                  
-</p><table class='align'>                        
-<tr><td class='align-odd'><span class='cmr-10'>cos</span><img align='middle' class='left' alt='(π-   )
- 2 − x' src='workbook-math19x.png' /></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-                        
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin</span><img align='middle' class='left' alt='( π-   )
-  2 − x' src='workbook-math20x.png' /></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-                        
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan</span><img align='middle' class='left' alt='(     )
- π-− x
- 2' src='workbook-math21x.png' /></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>cot(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-                        
-<td class='align-label'>                        </td></tr></table>
-</div>   
-<div class='newtheorem'>
-<!-- l. 88 --><p class='noindent'><span class='head'>
-<a id='x6-5010r10'></a>
-<span class='rm-lmbx-10'>1.1.10 </span>(補角公式)<span class='rm-lmbx-10'>.</span>  
-</span>
-</p><table class='align'>                        
-<tr><td class='align-odd'><span class='cmr-10'>cos(</span><span class='cmmi-10'>π </span><span class='cmsy-10'>− </span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><span class='cmr-10'>cos(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-                        
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>sin(</span><span class='cmmi-10'>π </span><span class='cmsy-10'>− </span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmr-10'>sin(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                          
-                        
-<td class='align-label'>
-</td></tr><tr><td class='align-odd'><span class='cmr-10'>tan(</span><span class='cmmi-10'>π </span><span class='cmsy-10'>− </span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-<td class='align-even'> <span class='cmr-10'>= </span><span class='cmsy-10'>−</span><span class='cmr-10'>tan(</span><span class='cmmi-10'>x</span><span class='cmr-10'>)</span></td>                        
-                        
-<td class='align-label'>                        </td></tr></table>
-                                                                  
-
-                                                                  
-</div>
-                                                                  
-
-                                                                  
-<!-- l. 95 --><div class='crosslinks'><p class='noindent'>[<a href='workbook-mathse1.html'>front</a>] [<a href='workbook-mathch1.html#workbook-mathse1.html'>up</a>] </p></div>
-<!-- l. 95 --><p class='indent'>   <a id='tailworkbook-mathse1.html'></a> </p> 
+<!-- l. 50 --><div class='crosslinks'><p class='noindent'>[<a href='workbook-mathse2.html'>next</a>] [<a href='workbook-mathse1.html'>front</a>] [<a href='workbook-mathch1.html#workbook-mathse1.html'>up</a>] </p></div>
+<!-- l. 50 --><p class='indent'>   <a id='tailworkbook-mathse1.html'></a>  </p> 
 </body> 
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html xml:lang='en-US' lang='en-US'> 
+<head><title>行列式の展開</title> 
+<meta charset='utf-8' /> 
+<meta name='generator' content='TeX4ht (http://www.tug.org/tex4ht/)' /> 
+<meta name='viewport' content='width=device-width,initial-scale=1' /> 
+<link rel='stylesheet' type='text/css' href='workbook-math.css' /> 
+<meta name='src' content='workbook-math.tex' /> 
+</head><body>
+<!-- l. 245 --><div class='crosslinks'><p class='noindent'>[<a href='workbook-mathse7.html'>prev</a>] [<a href='workbook-mathse7.html#tailworkbook-mathse7.html'>prev-tail</a>] [<a href='#tailworkbook-mathse8.html'>tail</a>] [<a href='workbook-mathch3.html#workbook-mathse8.html'>up</a>] </p></div>
+<h3 class='sectionHead'><span class='titlemark'>3.5   </span> <a id='x18-270003.5'></a>行列式の展開</h3>
+<div class='newtheorem'>
+<!-- l. 247 --><p class='noindent'><span class='head'>
+<a id='x18-27001r1'></a>
+<span class='rm-lmbx-10'>3.5.1.</span>  
+</span>
+</p>   
+<table class='equation'><tr><td>
+<center class='math-display'>
+<img src='workbook-math36x.png' class='math-display' alt='|                |  |                | |                |     |                  |
+||a11  a12  ... a1n||  ||a11  0   ...  0 || || 0   a12  ...  0 ||     || 0  ...   0    a1n||
+||a21  a22  ... a2n||  || 0  a22  ... a2n|| ||a21  0   ... a2n||     ||a21 ...  a2n−1   0 ||
+|| ..   ..        .. ||= || ..   ..        .. ||+|| ..    ..       .. ||+⋅⋅⋅+|| ..         ..    .. ||
+|| .   .   ...  . ||  || .   .   ...  . || || .    .  ...  . ||     || .  ...    .    . ||
+an1  an2  ... ann     0  an2  ... ann   an1  0   ... ann       an1 ... ann− 1  0
+' /></center></td><td class='equation-label'></td></tr></table>
+<!-- l. 273 --><p class='nopar'>
+</p>   
+</div>
+<!-- l. 275 --><p class='noindent'>
+</p>   
+<div class='proof'>
+<!-- l. 276 --><p class='indent'>   <span class='head'>
+<span class='rm-lmri-10'>Proof.</span> 
+</span>
+                                                                  
+
+                                                                  
+</p><table class='align'>    
+<tr><td class='align-odd'><img src='workbook-math37x.png' alt='|                 |
+||a11  a12 ...  a1n ||
+||a21  a22 ...  a2n ||
+|| ..    ..        .. ||
+|| .    .  ...   . ||
+ an1  an2 ...  ann' class='left' align='middle' /></td>    
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math38x.png' alt='|                    |
+||a11 + 0 a12  ...  a1n ||
+||0+ a21  a22  ...  a2n ||
+||   ..     ..        .. ||
+||   .     .   ...   . ||
+ 0+ an1  an2  ...  ann' class='left' align='middle' /></td>                     
+    
+<td class='align-label'>
+</td></tr><tr><td class='align-odd'></td>                          
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math39x.png' alt='|                |
+||a11 a12  ... a1n||
+|| 0  a22  ... a2n||
+|| ..   ..        .. ||
+|| .   .   ...  . ||
+  0  an2  ... ann' class='left' align='middle' /> <span class='cmr-10'>+ </span><img src='workbook-math40x.png' alt='|                |
+||0   a12  ...  a1n||
+||a21  a22  ...  a2n||
+|| ..   ..        .. ||
+|| .   .   ...   . ||
+an1  an2  ...  ann' class='left' align='middle' /></td>    
+    
+<td class='align-label'>
+</td></tr><tr><td class='align-odd'></td>                          
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math41x.png' alt='|                |
+||a11  0   ...  0 ||
+|| 0  a22  ... a2n||
+|| ...   ...   ...  ... ||
+|| 0  a    ... a  ||
+      n2       nn' class='left' align='middle' /> <span class='cmr-10'>+ </span><img src='workbook-math42x.png' alt='|                |
+||0   a12  ...  a1n||
+||a21  a22  ...  a2n||
+|| ...   ...   ...   ... ||
+||a    a    ...  a  ||
+ n1   n2       nn' class='left' align='middle' /></td>    
+    
+<td class='align-label'>    </td></tr></table>
+<!-- l. 317 --><p class='indent'>
+                                                                  
+
+                                                                  
+</p><table class='align'>
+<tr><td class='align-odd'><img src='workbook-math43x.png' alt='||0   a    a   ...  a ||
+||a    a12  a13  ...  a1n||
+||2.1   2.2   23.        2n.||
+||..    ..    ..  ...   ..||
+|an1  an2  an3 ... ann|' class='left' align='middle' /></td>
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math44x.png' alt='|| 0   a  + 0  a   ...  a ||
+||a    012+ a    a13  ...  a1n||
+|| 2.1    . 22   23.        2n.||
+|| ..     ..      ..  ...   ..||
+|an1  0+ an2  an3 ... ann|' class='left' align='middle' /></td>                      
+
+<td class='align-label'>
+</td></tr><tr><td class='align-odd'></td>                       
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math45x.png' alt='|| 0   a12  a13  ... a1n||
+||a21  0   a23  ... a2n||
+|| .    .   .        . ||
+|| ..    ..   ..   ...  .. ||
+|an1  0   an3  ... ann|' class='left' align='middle' /> <span class='cmr-10'>+ </span><img src='workbook-math46x.png' alt='||0    0   a13  ...  a1n||
+||a21  a22  a23  ...  a2n||
+||.    .    .        .||
+||..    ..    ..  ...   ..||
+|an1  an2  an3 ... ann|' class='left' align='middle' /></td>
+
+<td class='align-label'>
+</td></tr><tr><td class='align-odd'></td>                       
+<td class='align-even'> <span class='cmr-10'>= </span><img src='workbook-math47x.png' alt='|| 0   a12  a13  ...  0 ||
+||a21  0   a23  ... a2n||
+|| ..    ..        ..     ||
+|| .    .  ...   .     ||
+|an1  0   an3  ... ann|' class='left' align='middle' /> <span class='cmr-10'>+ </span><img src='workbook-math48x.png' alt='||0    0   a13  ...  a1n||
+||a21  a22  a23  ...  a2n||
+||..    ..    ..        ..||
+||.    .    .  ...   .||
+|an1  an2  an3 ... ann|' class='left' align='middle' /></td>
+
+<td class='align-label'></td></tr></table>
+<table class='equation'><tr><td>   
+<center class='math-display'>
+<img src='workbook-math49x.png' class='math-display' alt='||0   ...   0    a  ||  || 0  ...   0    a  ||
+||a    ... a      a1n||  ||a   ...  a      10n||
+||2.1       2n.−1   2.n||= || 21.        2n−.1   . ||
+||..   ...   ..     .. ||  || ..  ...    ..    .. ||
+|an1  ... ann−1  ann|  |an1 ... ann− 1  0 |
+' /></center></td><td class='equation-label'></td></tr></table>
+<!-- l. 371 --><p class='nopar'>                                                                 
+□
+</p>   
+</div>
+<!-- l. 373 --><div class='crosslinks'><p class='noindent'>[<a href='workbook-mathse7.html'>prev</a>] [<a href='workbook-mathse7.html#tailworkbook-mathse7.html'>prev-tail</a>] [<a href='workbook-mathse8.html'>front</a>] [<a href='workbook-mathch3.html#workbook-mathse8.html'>up</a>] </p></div>
+<!-- l. 373 --><p class='indent'>   <a id='tailworkbook-mathse8.html'></a> </p> 
+</body> 
+</html>
